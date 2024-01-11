@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">  
+</head>
+<body>
+   <header>
+    <div class="navbar">
+        <ul class="nav-list">
+        <li class="nav-item1">Popular Recipes</li>
+        <li class="nav-item1">Menu</li>
+        <li class="nav-item1">Indian Cuisine</li>
+        <li class="nav-item1">Dessert</li>
+        <li class="nav-item1">Street food</li>
+        <li class="nav-item1">About</li>
+        <li class="nav-item1">Contact</li>
+    </ul>
+</div>
+   </header>
+   <div class="dishes">
+    <div class="cards-section-title"><h1>Latest Food</h1></div>
+   <div class="cards-section">
+    <div class="card">
+        <img class="img" src="images/aloo_tikki.jpg" alt="a picture of aloo tikki">
+        <div class="card_des">
+        <h4>Lorem ipsum dolor sit amet.</h4>
+        <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, deserunt tempora vero natus atque vel quod facere. In illo perspiciatis ducimus similique quas atque? Quaerat quibusdam fugit numquam! Voluptatibus amet, quaerat nihil esse non fugit quos aut inventore illo est iusto deserunt voluptatum optio unde ex reprehenderit ea, repellendus perferendis?</p>
+        </div>    
+    </div>
+    <div class="card">
+        <img  class="img" src="images/indian_thali.webp" alt="yummy indian thali">
+        <div class="card_des">
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, deserunt tempora vero natus atque vel quod facere. In illo perspiciatis ducimus similique quas atque? Quaerat quibusdam fugit numquam! Voluptatibus amet, quaerat nihil esse non fugit quos aut inventore illo est iusto deserunt voluptatum optio unde ex reprehenderit ea, repellendus perferendis?</p>
+            </div>     
+    </div>
+    <div class="card">
+        <img class="img" src="images/paav_bhaji.jpg" alt="mouth drooling paav_bhaji">
+        <div class="card_des">
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, deserunt tempora vero natus atque vel quod facere. In illo perspiciatis ducimus similique quas atque? Quaerat quibusdam fugit numquam! Voluptatibus amet, quaerat nihil esse non fugit quos aut inventore illo est iusto deserunt voluptatum optio unde ex reprehenderit ea, repellendus perferendis?</p>
+            </div> 
+    </div>
+    <div class="card">
+        <img class="img" src="images/vegetarian_chowmein.jpg" alt="fast food vegetarian_chowmein">
+        <div class="card_des">
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, deserunt tempora vero natus atque vel quod facere. In illo perspiciatis ducimus similique quas atque? Quaerat quibusdam fugit numquam! Voluptatibus amet, quaerat nihil esse non fugit quos aut inventore illo est iusto deserunt voluptatum optio unde ex reprehenderit ea, repellendus perferendis?</p>
+            </div> 
+    </div>
+    <div class="card">
+        <img class="img" src="images/jeera_aloo.jpg" alt="tasty jeera aloo">
+        <div class="card_des">
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, deserunt tempora vero natus atque vel quod facere. In illo perspiciatis ducimus similique quas atque? Quaerat quibusdam fugit numquam! Voluptatibus amet, quaerat nihil esse non fugit quos aut inventore illo est iusto deserunt voluptatum optio unde ex reprehenderit ea, repellendus perferendis?</p>
+        </div> 
+   </div>
+   </div>
+   <div class="mentor_item">
+   </div>
+
+   <footer>
+         <div class="footer_item">
+            <div class="footer_item_item"><i class="fa fa-facebook fa-md" aria-hidden="true"> Facebook</i></div>
+            <div class="footer_item_item"><i class="fa fa-instagram fa-md" aria-hidden="true"> Instagram</i></div>
+            <div class="footer_item_item"><i class="fa fa-twitter fa-md" aria-hidden="true"> Twitter</i></div>
+            <div class="footer_item_item"><i class="fa fa-envelope fa-md" aria-hidden="true"> Email</i></div>
+            <div class="footer_item_item"><i class="fa fa-phone fa-md" aria-hidden="true"> Phone</i> </div>
+         </div>
+         <div class="footer_item_1">
+            <div><i class="fa fa-sharp fa-solid fa-copyright">copyright all right reseverd</i></div>
+         </div>
+   </footer>
+   <script>
+    let card=document.getElementsByClassName("card");
+    let card_img=document.getElementsByTagName("img");
+    let card_des=document.getElementsByClassName("card_des");
+    let toggle=new Array(card_des.length);
+    for(let i=0;i<toggle.length;i++){
+        toggle[i]=0;
+    }
+    // console.log(toggle);
+    for(let i=0;i<card.length;i++)
+    {
+        card[i].addEventListener("click",()=>{
+            // console.log(card_des[i],`${i}`);
+            if(toggle[i]===0)
+            {
+                card[i].innerHTML=card_des[i].innerHTML;
+                toggle[i]=1;
+            }
+            else{
+                // console.log(card_img[i]);
+                card[i].innerHTML=card_img[i].innerHTML; 
+                toggle[i]=0;
+            }
+
+        });
+    }
+   </script> 
+
+
+
+</body>
+</html>
